@@ -49,6 +49,13 @@
     <p>© 2026 - Le Cercle de MigniaX</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Lueur souris (simple, sans Firebase) -->
+  <script>
+    const glow = document.querySelector(".mouse-glow");
+    document.addEventListener("mousemove", (e) => {
+      glow.style.left = `${e.clientX}px`;
+      glow.style.top = `${e.clientY}px`;
+    });
+  </script>
 </body>
 </html>
