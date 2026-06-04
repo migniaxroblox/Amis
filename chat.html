@@ -5,13 +5,14 @@
   <title>Chat - MigniaX</title>
   <link rel="stylesheet" href="style.css">
 
-  <!-- Firebase v8 (compat avec firebase.initializeApp) -->
+  <!-- Firebase v8 (OBLIGATOIRE pour firebase.initializeApp) -->
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 </head>
 
 <body>
 
+  <!-- Lueur souris -->
   <div class="mouse-glow"></div>
 
   <header>
@@ -22,25 +23,32 @@
   <main class="chat-page">
 
     <div class="chat-box">
+
+      <!-- LISTE DES MESSAGES -->
       <div id="messages"></div>
 
+      <!-- INPUT -->
       <div class="chat-input">
         <input id="messageInput" type="text" placeholder="Écris un message…">
         <button onclick="sendMessage()">Envoyer</button>
       </div>
 
+      <!-- RÉACTIONS -->
       <div class="reactions">
         <span onclick="sendReaction('🔥')">🔥</span>
         <span onclick="sendReaction('😂')">😂</span>
         <span onclick="sendReaction('❤️')">❤️</span>
         <span onclick="sendReaction('😎')">😎</span>
       </div>
+
     </div>
 
     <a href="index.html" class="chat-button">⬅ Retour</a>
 
   </main>
 
+  <!-- SCRIPT DU CHAT -->
   <script src="script.js"></script>
+
 </body>
 </html>
