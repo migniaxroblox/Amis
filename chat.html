@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat - MigniaX</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Firebase CDN -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+</head>
+
+<body>
+
+  <div class="mouse-glow"></div>
+
+  <header>
+    <h1 class="title">Chat en ligne</h1>
+    <p class="subtitle">Discute avec style.</p>
+  </header>
+
+  <main class="chat-page">
+
+    <div class="chat-box">
+      <div id="messages"></div>
+
+      <div class="chat-input">
+        <input id="messageInput" type="text" placeholder="Écris un message…">
+        <button onclick="sendMessage()">Envoyer</button>
+      </div>
+
+      <div class="reactions">
+        <span onclick="sendReaction('🔥')">🔥</span>
+        <span onclick="sendReaction('😂')">😂</span>
+        <span onclick="sendReaction('❤️')">❤️</span>
+        <span onclick="sendReaction('😎')">😎</span>
+      </div>
+    </div>
+
+    <a href="index.html" class="chat-button">⬅ Retour</a>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

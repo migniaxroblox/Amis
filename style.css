@@ -1,0 +1,195 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top, #0a0f1f, #000);
+  color: #e2e8f0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ---------------------- */
+/*   LUEUR SOURIS         */
+/* ---------------------- */
+
+.mouse-glow {
+  position: fixed;
+  width: 350px;
+  height: 350px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    rgba(56,189,248,0.35),
+    rgba(236,72,153,0.25),
+    transparent 70%
+  );
+  filter: blur(60px);
+  mix-blend-mode: screen;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s linear;
+}
+
+/* ---------------------- */
+/*   TITRES               */
+/* ---------------------- */
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(120deg, #38bdf8, #a855f7, #f97316);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 40px rgba(56,189,248,0.6);
+}
+
+.subtitle {
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+/* ---------------------- */
+/*   CARTES AMIS          */
+/* ---------------------- */
+
+.friend-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 25px;
+  padding: 25px;
+  margin: 25px auto;
+  width: 90%;
+  max-width: 700px;
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  transition: 0.4s ease;
+}
+
+.friend-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 40px 120px rgba(0,0,0,0.8);
+}
+
+/* ---------------------- */
+/*   BOUTON CHAT          */
+/* ---------------------- */
+
+.chat-button {
+  display: block;
+  width: fit-content;
+  margin: 40px auto;
+  padding: 14px 28px;
+  background: linear-gradient(120deg, #38bdf8, #a855f7);
+  color: white;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(56,189,248,0.4);
+  transition: 0.3s;
+}
+
+.chat-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 50px rgba(56,189,248,0.6);
+}
+
+/* ---------------------- */
+/*   PAGE DU CHAT         */
+/* ---------------------- */
+
+.chat-page {
+  max-width: 700px;
+  margin: auto;
+}
+
+.chat-box {
+  background: rgba(255,255,255,0.05);
+  border-radius: 25px;
+  padding: 25px;
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+#messages {
+  height: 350px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.msg {
+  margin-bottom: 12px;
+  padding: 10px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+}
+
+/* ---------------------- */
+/*   INPUT DU CHAT        */
+/* ---------------------- */
+
+.chat-input {
+  display: flex;
+  margin-top: 15px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.chat-input button {
+  margin-left: 10px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #38bdf8;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ---------------------- */
+/*   RÉACTIONS            */
+/* ---------------------- */
+
+.reactions {
+  margin-top: 15px;
+  font-size: 1.8rem;
+}
+
+.reactions span {
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.reactions span:hover {
+  transform: scale(1.3);
+}
+
+/* ---------------------- */
+/*   FOOTER               */
+/* ---------------------- */
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  opacity: 0.6;
+}
